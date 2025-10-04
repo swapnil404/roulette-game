@@ -1,0 +1,29 @@
+#body {
+  background-color: black;
+}
+
+#table {
+  background-color: white;
+  height: 400px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+#spin {
+  margin: auto;
+  width: 700px;
+  text-align: center;
+}
+
+#spin-button {
+  size: 300px;
+  display: block;
+  margin: auto;
+  height: 70px;
+  width: 200px;
+}
+
+#color-buttons {
+  margin: auto;
+  width: 700px;
+}
