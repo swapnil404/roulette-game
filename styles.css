@@ -25,21 +25,86 @@
 }
 
 #spin-button {
+  background-color: yellow;
+  font-family: "Press Start 2P";
+  font-size: medium;
   size: 300px;
   display: block;
   margin: auto;
-  height: 70px;
-  width: 200px;
+  height: 100px;
+  width: 300px;
+  border-style: outset;
+  border-color: lightgray;
+  border-width: 6px;
 }
-#spin-button:hover {
-  border: 10px solid #39ff14;
+
+#spin-button:active {
+  border-style: outset;
+  border-color: gray;
+  border-width: 6px;
 }
+
 #color-buttons {
   margin: auto;
   width: 700px;
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+#red-button {
+  background-color: red;
+  font-family: "Press Start 2P";
+  font-size: medium;
+  color: black;
+  size: 300px;
+  display: block;
+  margin-left: auto;
+  float: right;
+  height: 70px;
+  width: 200px;
+  border-style: outset;
+  border-color: lightgray;
+  border-width: 6px;
+}
+
+#red-button:active {
+  border-style: outset;
+  border-color: gray;
+  border-width: 6px;
+}
+
+#black-button {
+  background-color: black;
+  font-family: "Press Start 2P";
+  font-size: medium;
+  color: red;
+  size: 300px;
+  display: block;
+  margin-right: auto;
+  float: left;
+  height: 70px;
+  width: 200px;
+  border-style: outset;
+  border-color: lightgray;
+  border-width: 6px;
+}
+
+#black-button:active {
+  border-style: outset;
+  border-color: gray;
+  border-width: 6px;
 }
 
 @keyframes colorChange {
-  0%, 50% { color: red; }
-  51%, 100% { color: black; }
+  0%,
+  50% {
+    color: red;
+  }
+  51%,
+  100% {
+    color: black;
+  }
 }
