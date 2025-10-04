@@ -3,16 +3,19 @@
 }
 
 #money {
-    font-family: "Press Start 2P";
-    font-size: 16px;
-    color: gold;
-    text-align: right;
-    margin: 20px;
+  font-family: "Press Start 2P";
+  font-size: 16px;
+  color: gold;
+  text-align: right;
+  margin: 20px;
 }
 
 #table {
+  border-style: outset;
+  border-color: darkgreen;
+  border-width: 6px;
   background-color: green;
-  height: 400px;
+  height: 500px;
   margin: auto;
   margin-bottom: 20px;
   font-family: "Press Start 2P";
@@ -24,6 +27,24 @@
   animation: colorChange 1s infinite;
   text-align: center;
   margin: auto;
+}
+
+#bet-inputs {
+  margin: auto;
+  width: 700px;
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+input[type="number"] {
+  font-family: "Press Start 2P";
+  font-size: 12px;
+  padding: 10px;
+  width: 400px;
+  border: 2px solid lightgray;
+  border-radius: 5px;
 }
 
 #spin {
@@ -68,9 +89,7 @@
   font-size: medium;
   color: black;
   size: 300px;
-  display: block;
-  margin-left: auto;
-  float: right;
+
   height: 70px;
   width: 200px;
   border-style: outset;
@@ -90,9 +109,7 @@
   font-size: medium;
   color: red;
   size: 300px;
-  display: block;
-  margin-right: auto;
-  float: left;
+
   height: 70px;
   width: 200px;
   border-style: outset;

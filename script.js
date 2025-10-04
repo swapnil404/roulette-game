@@ -5,7 +5,7 @@ function updateMoneyDisplay() {
 }
 
 function addMoney(amount) {
-  money += amount;
+  money += parseInt(amount);
   updateMoneyDisplay();
 }
 
@@ -15,5 +15,13 @@ function subtractMoney(amount) {
     updateMoneyDisplay();
     return true;
   }
-  return false; 
+  return false;
+}
+
+function spin() {
+  console.log("button");
+
+  amount = document.getElementById("bet-amount");
+
+  addMoney(amount.value);
 }
