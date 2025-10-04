@@ -3,10 +3,19 @@
 }
 
 #table {
-  background-color: white;
+  background-color: green;
   height: 400px;
   margin: auto;
   margin-bottom: 20px;
+  font-family: "Press Start 2P";
+  display: grid;
+}
+
+#text {
+  font-size: 70px;
+  animation: colorChange 1s infinite;
+  text-align: center;
+  margin: auto;
 }
 
 #spin {
@@ -22,8 +31,15 @@
   height: 70px;
   width: 200px;
 }
-
+#spin-button:hover {
+  border: 10px solid #39ff14;
+}
 #color-buttons {
   margin: auto;
   width: 700px;
+}
+
+@keyframes colorChange {
+  0%, 50% { color: red; }
+  51%, 100% { color: black; }
 }
