@@ -7,6 +7,14 @@ function updateMoneyDisplay() {
   document.getElementById("money").textContent = `Money: $${money}`;
 }
 
+function updateColourDisplayRed() {
+  document.getElementById("colour").textContent = `Colour Selected: Red`;
+}
+
+function updateColourDisplayBlack() {
+  document.getElementById("colour").textContent = `Colour Selected: Black`;
+}
+
 function addMoney(amount) {
   money += parseInt(amount);
   updateMoneyDisplay();
@@ -21,25 +29,28 @@ function subtractMoney(amount) {
   return false;
 }
 
-function red(){
+function red() {
+  updateColourDisplayRed();
   colour = "red";
   lost = "black";
 }
 
-function black(){
+function black() {
+  updateColourDisplayBlack();
   colour = "black";
-  lost="red";``
+  lost = "red";
+  ``;
 }
 
 function spin() {
   amount = document.getElementById("bet-amount");
-  let number =Math.floor(Math.random()*(10-1+1))+1;
+  let number = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
   let remainder = number % 2;
   if (remainder == 0) {
-    display_color= colour;
+    display_color = colour;
     addMoney(amount.value);
   } else {
-    display_color= lost;
-   subtractMoney(amount.value);
+    display_color = lost;
+    subtractMoney(amount.value);
   }
 }
