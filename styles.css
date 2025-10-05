@@ -10,13 +10,12 @@
   margin: 20px;
 }
 
-
 #table {
   border-style: outset;
   border-color: darkgreen;
   border-width: 6px;
   background-color: green;
-  height: 500px;
+  height: 400px;
   margin: auto;
   margin-bottom: 20px;
   font-family: "Press Start 2P";
