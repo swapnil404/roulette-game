@@ -11,22 +11,48 @@
 }
 
 #table {
-  border-style: outset;
-  border-color: darkgreen;
-  border-width: 6px;
-  background-color: green;
+  border-style: groove;
+  border-color: brown;
+  border-width: 20px;
+  background-color: darkgreen;
   height: 400px;
   margin: auto;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  margin-top: 30px;
   font-family: "Press Start 2P";
   display: grid;
 }
 
 #text {
+  outline: none;
   font-size: 70px;
   animation: colorChange 1s infinite;
   text-align: center;
   margin: auto;
+}
+
+#spin-circle {
+  border-radius: 50%;
+  background-color: rgb(210, 210, 0);
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  margin: auto;
+  border: 170px solid #ccc;
+  border-top-color: #000;
+  border-right-color: red;
+  border-bottom-color: black;
+  border-left-color: red;
+  animation: spin 0.5s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 #bet-inputs {
@@ -80,7 +106,7 @@ input[type="number"] {
   margin-bottom: 20px;
   display: flex;
   gap: 20px;
-  justify-content: center;
+ justify-content: center;
 }
 
 #red-button {
@@ -127,9 +153,19 @@ input[type="number"] {
   0%,
   50% {
     color: red;
+    text-shadow: 1px 1px black;
   }
   51%,
   100% {
     color: black;
+    text-shadow: 1px 1px red;
   }
+}
+
+#sides > div {
+  background-color: darkgreen;
+  border: 1px solid black;
+  padding: 10px;
+  /* font-size: 0px; */
+  text-align: center;
 }

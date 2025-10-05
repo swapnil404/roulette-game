@@ -21,13 +21,18 @@
     </div>
 
     <div id="table">
-      <div id="text">
-        <p>ROULETTE!</p>
-        <div id="spin">
-          <button id="spin-button" type="button" onclick="spin()">
-            Spin Wheel!
-          </button>
+      <div id="sides" style="display: grid; grid-template-columns: auto auto">
+        <div id="text">
+          <p>ROULETTE!</p>
+
+          <div id="spin">
+            <button id="spin-button" type="button" onclick="spin()">
+              Spin Wheel!
+            </button>
+          </div>
         </div>
+
+        <div><div id="spin-circle"></div></div>
       </div>
     </div>
     <div id="bet-inputs">
