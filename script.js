@@ -45,6 +45,7 @@ function black() {
 }
 
 function spin() {
+  q
   document.getElementById("result").innerHTML = "";
   amount = document.getElementById("bet-amount");
   if (amount.value == "") {
@@ -89,15 +90,14 @@ function spin() {
 
 function wheel() {
   console.log(display_color);
-  if (display_color == "red") {
-    document.getElementById("spin-circle").style.animation =
-      "spin_red 2s forwards";
-    // document.getElementById("spin-circle").style.rotate = "0deg";
-    // document.getElementById("spin-circle").style.rotate = "180deg";
+  const wheel = document.getElementById("spin-circle");
+
+  wheel.style.animation = "none"; 
+  void wheel.offsetWidth; 
+
+  if (display_color === "red") {
+    wheel.style.animation = "spin_red 2s ease forwards";
   } else {
-    document.getElementById("spin-circle").style.animation =
-      "spin_black 2s forwards";
-    // document.getElementById("spin-circle").style.rotate = "0deg";
-    // document.getElementById("spin-circle").style.rotate = "90deg";
+    wheel.style.animation = "spin_black 2s ease forwards";
   }
 }

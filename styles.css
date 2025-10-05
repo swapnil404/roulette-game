@@ -207,5 +207,5 @@ input[type="number"] {
   transform: rotate(90deg);
   top: 256px;
   right: 460px;
-  position: fixed;
+  position: absolute;
 }
