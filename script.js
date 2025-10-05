@@ -45,8 +45,6 @@ function black() {
 }
 
 function spin() {
-  document.getElementById("spin-button").setAttribute("disabled", "true");
-
   document.getElementById("result").innerHTML = "";
   amount = document.getElementById("bet-amount");
   if (amount.value == "") {
@@ -58,6 +56,7 @@ function spin() {
   } else if (colour == "not_selected") {
     alert("Please Select A Color To Bet On!");
   } else {
+    document.getElementById("spin-button").setAttribute("disabled", "true");
     let number = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
     let remainder = number % 2;
     if (remainder == 0) {
