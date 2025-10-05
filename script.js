@@ -45,7 +45,8 @@ function black() {
 }
 
 function spin() {
-  q
+  document.getElementById("spin-button").setAttribute("disabled", "true");
+
   document.getElementById("result").innerHTML = "";
   amount = document.getElementById("bet-amount");
   if (amount.value == "") {
@@ -66,10 +67,9 @@ function spin() {
         document.getElementById("result").innerHTML =
           "YOU WON $" + amount.value;
         addMoney(amount.value);
-        // document.getElementById("spin-circle").style.animation = "none";
-        // document.getElementById("spin-circle").style.rotate = "0deg";
         document.getElementById("result").style.animation =
           "winColorChange 1s infinite";
+        document.getElementById("spin-button").removeAttribute("disabled");
       }, 2000);
     } else {
       display_color = lost;
@@ -77,12 +77,10 @@ function spin() {
       const myTimeout2 = setTimeout(() => {
         document.getElementById("result").innerHTML =
           "YOU Lost $" + amount.value;
-
         subtractMoney(amount.value);
-        // document.getElementById("spin-circle").style.animation = "none";
-        // document.getElementById("spin-circle").style.rotate = "0deg";
         document.getElementById("result").style.animation =
           "colorChange 1s infinite";
+        document.getElementById("spin-button").removeAttribute("disabled");
       }, 2000);
     }
   }
@@ -92,8 +90,8 @@ function wheel() {
   console.log(display_color);
   const wheel = document.getElementById("spin-circle");
 
-  wheel.style.animation = "none"; 
-  void wheel.offsetWidth; 
+  wheel.style.animation = "none";
+  void wheel.offsetWidth;
 
   if (display_color === "red") {
     wheel.style.animation = "spin_red 2s ease forwards";
