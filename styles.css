@@ -23,7 +23,8 @@
   display: grid;
 }
 
-#text {
+#text,
+#result {
   outline: none;
   font-size: 70px;
   animation: colorChange 1s infinite;
@@ -43,15 +44,30 @@
   border-right-color: red;
   border-bottom-color: black;
   border-left-color: red;
-  animation: spin 0.5s linear infinite;
+  animation: none;
+  /* animation-fill-mode: both; */
 }
-@keyframes spin {
+@keyframes spin_red {
   0% {
     transform: rotate(0deg);
   }
-
-  100% {
+  50% {
     transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
+@keyframes spin_black {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(630deg);
   }
 }
 
@@ -106,7 +122,7 @@ input[type="number"] {
   margin-bottom: 20px;
   display: flex;
   gap: 20px;
- justify-content: center;
+  justify-content: center;
 }
 
 #red-button {
@@ -162,10 +178,34 @@ input[type="number"] {
   }
 }
 
+@keyframes winColorChange {
+  0%,
+  50% {
+    color: rgb(75, 199, 75);
+    text-shadow: 1px 1px black;
+  }
+  51%,
+  100% {
+    color: black;
+    text-shadow: 1px 1px rgb(75, 199, 75);
+  }
+}
+
 #sides > div {
   background-color: darkgreen;
-  border: 1px solid black;
   padding: 10px;
   /* font-size: 0px; */
   text-align: center;
+}
+#pin {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 50px solid rgb(77, 47, 0);
+  margin: 2rem;
+  transform: rotate(90deg);
+  top: 256px;
+  right: 460px;
+  position: fixed;
 }
