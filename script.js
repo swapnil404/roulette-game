@@ -9,10 +9,14 @@ function updateMoneyDisplay() {
 
 function updateColourDisplayRed() {
   document.getElementById("colour").textContent = `Colour Selected: Red`;
+  document.getElementById("red-button").style.borderColor = `gray`;
+  document.getElementById("black-button").style.borderColor = `lightgray`;
 }
 
 function updateColourDisplayBlack() {
   document.getElementById("colour").textContent = `Colour Selected: Black`;
+  document.getElementById("black-button").style.borderColor = `gray`;
+  document.getElementById("red-button").style.borderColor = `lightgray`;
 }
 
 function addMoney(amount) {
